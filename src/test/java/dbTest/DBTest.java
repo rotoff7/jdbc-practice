@@ -38,7 +38,7 @@ public class DBTest extends BaseTest {
                         Assertions.assertEquals("FRUIT", type, "Wrong type");
                         Assertions.assertEquals(1, exotic, "Wrong exotic type");
                         // Возвращаем изначальное состояние БД, удалив добавленный товар.
-                        SqlHelp.delRow(lastRowId);
+                        SqlHelp.delRow(lastRowId, connection);
                     }
                 }
             }
